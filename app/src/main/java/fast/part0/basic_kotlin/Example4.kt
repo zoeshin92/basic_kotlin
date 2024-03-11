@@ -1,15 +1,15 @@
 package fast.part0.basic_kotlin
 
 fun main(){
-    val user = User("Zoe", 25)
+    val user = User("Zoe", 25, true)
 //    println(user.age)
    Kid("Felix", 25, "male")
 
 }
 
-open class User(open val name: String, open var age: Int = 31)
+open class User(open val name: String, open var age: Int = 31, b: Boolean)
 
-class Kid(override val name: String, override var age: Int): User(name, age){
+class Kid(override val name: String, override var age: Int): User(name, age, true){
     var gender: String = "female"
 
     init {
